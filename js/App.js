@@ -24,8 +24,9 @@ function renderIceCream(){
     let iceCreamItem = "";
 
     for(let iceItem of state.iceCream){
-        iceCreamItem += `<div>
+        iceCreamItem += `<div class='card m-2 p-2  ${iceItem.Stock === false ? 'bg-danger bs' : 'bg-light my-shadow' } '>
         <p>${iceItem.name}</p>
+        <p>${iceItem.price}$</p>
         </div>`
     }
     document.getElementById('ice-cream-items').innerHTML = iceCreamItem;
