@@ -52,23 +52,3 @@ document.getElementById("create-ice-cream").onsubmit = (e) => {
   renderIceCream()
 }
 
-
-// document.getElementById('create-product').onsubmit = (e) => {
-
-//     e.preventDefault();
-//     let price = Number(e.target.elements.price.value);
-//     let name = e.target.elements.name.value;
-//     let isInStock = e.target.elements.isInStock.checked;
-    
-//     //state change
-//     state.products.push({
-//         id: uid(),
-//         name: name,
-//         price: price,
-//         isInStock: isInStock
-//     })
-    
-//     //render
-//     renderProducts()
-    
-//     }
