@@ -4,21 +4,31 @@ let state = {
         {
             name: 'Chocolate Ice Cream',
             price: 30,
-            isInStock: true
+            Stock: true
         },
         {
             name: 'Vanilla Ice Cream',
             price: 25,
-            isInStock: false
+            Stock: false
         },
         {
             name: 'Strawberry Ice Cream',
             price: 60,
-            isInStock: true
+            Stock: true
         },
 
     ]
 }
 
+function renderIceCream(){
+    let iceCreamItem = "";
 
+    for(let iceItem of state.iceCream){
+        iceCreamItem += `<div>
+        <p>${iceItem.name}</p>
+        </div>`
+    }
+    document.getElementById('ice-cream-items').innerHTML = iceCreamItem;
+}
 
+window.onload = renderIceCream;
