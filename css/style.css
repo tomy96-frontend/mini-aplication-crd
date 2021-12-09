@@ -46,6 +46,11 @@ html, body {
     color: white;
 }
 
+.my-btnTwo {
+   width: 80px;
+   
+}
+
 .my-bg {
     background: linear-gradient(to right, rgb(0, 255, 251), rgb(0, 124, 128));
 }
