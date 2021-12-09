@@ -40,8 +40,19 @@ function renderIceCream(){
     for(let delBtn of document.querySelectorAll('.delete-ice')){
         
         delBtn.onclick = (e)=>{
-            console.log(e.target.dataset);
-
+            console.log(e.target.dataset.iceid);
+        let id = e.target.dataset.iceid
+        
+            let iceI;
+            for(let i=0; i < state.iceCream.length; i++){
+                if(state.iceCream[i].id === id){
+                    iceI = i;
+                    break;
+                }
+            }
+            console.log(iceI);
+            state.iceCream.splice(iceI,1)
+            renderIceCream()
         }
     }
 
