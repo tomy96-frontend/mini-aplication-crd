@@ -41,17 +41,19 @@ function renderIceCream(){
         
         delBtn.onclick = (e)=>{
             console.log(e.target.dataset.iceid);
-        let id = e.target.dataset.iceid
+            let id = e.target.dataset.iceid
         
             let iceI;
-            for(let i=0; i < state.iceCream.length; i++){
+            for(let i = 0; i < state.iceCream.length ; i++){
                 if(state.iceCream[i].id === id){
                     iceI = i;
                     break;
                 }
             }
+
             console.log(iceI);
-            state.iceCream.splice(iceI,1)
+            state.iceCream.splice(iceI,1);
+
             renderIceCream()
         }
     }
@@ -69,6 +71,7 @@ document.getElementById("create-ice-cream").onsubmit = (e) => {
   let Stock = e.target.elements.Stock.checked
     
   state.iceCream.push({
+      id: uid(),
       name:name,
       price: price,
       Stock: Stock
